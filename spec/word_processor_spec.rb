@@ -10,5 +10,12 @@ describe WordProcessor do
       expect(subject.spell_checker('hello')).to eq 'hello' 
     end
 
+    it 'should return misspelt word with "~" before and after the word' do
+      expect(subject.spell_checker('helo')).to eq '~helo~'
+    end
+
+    it 'should work for different words' do
+      expect(subject.spell_checker('goodbye')).to eq 'goodbye'
+    end
   end
 end
