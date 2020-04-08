@@ -10,6 +10,8 @@ class WordProcessor
       words
     when 'cat'
       words
+    when 'dog'
+      words
     when ''
       words
     else
