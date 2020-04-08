@@ -14,11 +14,11 @@ describe WordProcessor do
       expect(subject.spell_checker('helo')).to eq '~helo~'
     end
 
-    it 'should work for different words' do
+    it 'should work for "goodbye"' do
       expect(subject.spell_checker('goodbye')).to eq 'goodbye'
     end
 
-    it 'should work for different words' do
+    it 'should put "~" before and after "godbye"' do
       expect(subject.spell_checker('godbye')).to eq '~godbye~'
     end
   end
