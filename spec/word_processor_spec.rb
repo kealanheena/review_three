@@ -17,5 +17,9 @@ describe WordProcessor do
     it 'should work for different words' do
       expect(subject.spell_checker('goodbye')).to eq 'goodbye'
     end
+
+    it 'should work for different words' do
+      expect(subject.spell_checker('godbye')).to eq '~godbye~'
+    end
   end
 end
