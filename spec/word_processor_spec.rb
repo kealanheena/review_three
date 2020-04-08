@@ -27,5 +27,9 @@ describe WordProcessor do
     it 'should work for "cat"' do
       expect(subject.spell_checker('cat')).to eq 'cat'
     end
+
+    it 'should put "~" before and after "caat"' do
+      expect(subject.spell_checker('caat')).to eq '~caat~'
+    end
   end
 end
