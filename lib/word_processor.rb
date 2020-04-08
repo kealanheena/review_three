@@ -2,20 +2,22 @@
 
 # A word processor for spell checking words
 class WordProcessor
-  def spell_checker(words)
-    case words
-    when 'hello'
-      words
-    when 'goodbye'
-      words
-    when 'cat'
-      words
-    when 'dog'
-      words
-    when ''
-      words
-    else
-      "~#{words}~"
+  def initialize
+    @words = [
+      '',
+      'hello',
+      'goodbye',
+      'cat',
+      'dog'
+    ]
+  end
+
+  def spell_checker(phrase)
+    highlighted_phrases = ''
+
+    @words.each do |word|
+      phrase == word ? (return phrase) : highlighted_phrases = "~#{phrase}~"
     end
+    highlighted_phrases
   end
 end

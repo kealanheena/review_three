@@ -16,6 +16,9 @@ This will return:
 ## User Stories
 
 ```
+As a user,
+So I can spell things correctly,
+I would like my misspelt words to be highlighted.
 
 ```
 
