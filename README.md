@@ -6,11 +6,11 @@ This is my Third review at Makers.
 
 Create an app that acts as a Spell Checker. It takes a string of words and returns the same string with '~' before and after misspelt words. e.g.
 ```
-'hello godbye'
+'godbye'
 
 This will return:
 
-'hello ~godbye~'
+'~godbye~'
 ```
 
 ## User Stories
@@ -19,6 +19,10 @@ This will return:
 As a user,
 So I can spell things correctly,
 I would like my misspelt words to be highlighted.
+
+As a user,
+So I can see I've correctly spelt everything,
+ I would like to see my word unaltered.
 
 ```
 
