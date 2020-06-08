@@ -26,7 +26,6 @@ So I can see I've correctly spelt everything,
 
 ```
 
-
 ## Features
 
 - returns the input with '~' before and after misspelt.
