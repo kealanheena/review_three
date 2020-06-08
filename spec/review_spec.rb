@@ -26,6 +26,18 @@ describe StringCalculator do
       it 'should return an array' do
         expect(subject.calculate('1 + 1')).to eq ['1 + 1', 2]
       end
+
+      it 'should return an array' do
+        expect(subject.calculate('1 - 1')).to eq ['1 - 1', 0]
+      end
+
+      it 'should return an array' do
+        expect(subject.calculate('1 * 1')).to eq ['1 * 1', 1]
+      end
+
+      it 'should return an array' do
+        expect(subject.calculate('1 / 1')).to eq ['1 / 1', 1]
+      end
     end
   end
 end
