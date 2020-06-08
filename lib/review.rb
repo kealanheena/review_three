@@ -1,34 +1,33 @@
  
  class StringCalculator
 
-  def calculate(string)
-    return ['', 0] if string == ''
+  def calculateString(equation)
+    return ['', 0] if equation === ''
     
-    equation_array = string.split(' ')
-    @sum = equation_array[0].to_i
-    operator = get_operator(equation_array)
-    equation_array = equation_array.map { |number| number.to_i }
+    equation_arr = equation.split(' ')
+    @sum = equation_arr.first.to_i
+    operator = getOperator(equation_arr)
+    equation__num_arr = equation_arr.map { |number| number.to_i }
+    calculate(operator, equation_num_arr)
 
-    calculate_with_operator(operator, equation_array)
-
-    [string, @sum]
+    [equation, @sum]
   end
 
   private
 
-  def get_operator(array)
-    array.delete_at(1)
+  def getOperator(equation_arr)
+    equation_arr.delete_at(1)
   end
 
-  def calculate_with_operator(operator, array)
+  def calculate(operator, equation_arr)
     if operator == '+'
-      @sum = array.reduce(:+)
+      @sum = equation_arr.reduce(:+)
     elsif operator == '-'
-      @sum = array.reduce(:-)
+      @sum = equation_arr.reduce(:-)
     elsif operator == '*'
-      @sum = array.reduce(:*)
+      @sum = equation_arr.reduce(:*)
     elsif operator == '/'
-      @sum = array.reduce(:/)
+      @sum = equation_arr.reduce(:/)
     end
   end
  end
