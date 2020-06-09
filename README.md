@@ -23,7 +23,6 @@ I would like my misspelt words to be highlighted.
 As a user,
 So I can see I've correctly spelt everything,
  I would like to see my word unaltered.
-
 ```
 
 ## Features
